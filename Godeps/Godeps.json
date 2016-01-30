@@ -1,0 +1,10 @@
+{
+	"ImportPath": "github.com/longnguyen11288/docker-count",
+	"GoVersion": "go1.5.1",
+	"Deps": [
+		{
+			"ImportPath": "github.com/fsouza/go-dockerclient",
+			"Rev": "6fb38e6bb3d544d7eb5b55fd396cd4e6850802d8"
+		}
+	]
+}
