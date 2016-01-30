@@ -21,11 +21,11 @@ func main() {
 	if err != nil {
 		log.Fatalln("Error creating docker client")
 	}
-	env, err := client.Info()
+	containers, err := client.ListContainers(docker.ListContainersOptions{})
 	if err != nil {
 		log.Fatalln("Error getting docker info")
 	}
-	count := DockerCount{env.GetInt("Containers")}
+	count := DockerCount{len(containers)}
 	jsonCount, _ := json.Marshal(count)
 	fmt.Println(string(jsonCount))
 }
